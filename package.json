@@ -1,0 +1,91 @@
+{
+  "name": "djz-prompt-angel",
+  "version": "2.5.0",
+  "description": "DJZ Prompt Angel - Multi-Model AI Assistant - Desktop Application",
+  "main": "src/main/main.js",
+  "scripts": {
+    "start": "electron .",
+    "dev": "concurrently \"npm run server\" \"npm run electron-dev\"",
+    "server": "node src/server/server.js",
+    "electron-dev": "wait-on http://localhost:3000 && electron .",
+    "build": "electron-builder",
+    "build-win": "electron-builder --win",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "build": {
+    "appId": "com.djzpromptangel.app",
+    "productName": "DJZ-Prompt-Angel",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "src/**/*",
+      "assets/**/*",
+      "system-prompts/**/*",
+      "package.json",
+      "!node_modules/{.cache,@types,typescript,eslint*,prettier*,jest*,mocha*,chai*,nyc*,coverage*,*.md}"
+    ],
+    "compression": "maximum",
+    "extraResources": [
+      {
+        "from": "assets",
+        "to": "assets",
+        "filter": [
+          "**/*"
+        ]
+      },
+      {
+        "from": "system-prompts",
+        "to": "system-prompts",
+        "filter": [
+          "**/*"
+        ]
+      }
+    ],
+    "win": {
+      "target": {
+        "target": "nsis",
+        "arch": [
+          "x64"
+        ]
+      },
+      "publisherName": "DJZ-Prompt-Angel Team",
+      "verifyUpdateCodeSignature": false
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "allowElevation": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "DJZ-Prompt-Angel"
+    }
+  },
+  "keywords": [
+    "ai",
+    "prompt",
+    "assistant",
+    "multi-model",
+    "generative",
+    "djz"
+  ],
+  "author": "DJZ-Prompt-Angel Team",
+  "license": "MIT",
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.24.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "fs-extra": "^11.1.1",
+    "multer": "^1.4.5-lts.1",
+    "ollama": "^0.5.9",
+    "openai": "^4.20.0",
+    "winston": "^3.11.0"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "electron": "^27.0.0",
+    "electron-builder": "^24.6.4",
+    "wait-on": "^7.2.0"
+  }
+}
