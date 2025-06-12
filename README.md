@@ -2,7 +2,7 @@
 
 **DJZ-Prompt-Angel** is a model-agnostic AI prompt enhancement desktop application that transforms basic ideas into detailed, optimized prompts for any generative AI model. Built upon the foundation of VEO3-Angel, it has evolved into a universal prompt enhancer with multi-provider support, extensible MD-based datasources, and a modern dark-mode interface.
 
-![DJZ-Prompt-Angel Interface](veo3-angel.png)
+![DJZ-Prompt-Angel Interface](djz-prompt-angel.png)
 
 ## 🎯 Project Vision
 
