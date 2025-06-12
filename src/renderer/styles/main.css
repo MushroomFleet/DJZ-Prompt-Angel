@@ -306,15 +306,24 @@ textarea:focus {
 }
 
 .dark .category-card p {
-    @apply text-gray-300;
+    @apply text-gray-300 !important;
+}
+
+.dark .category-card * {
+    color: #d1d5db !important; /* text-gray-300 */
+}
+
+.dark .category-card h3 {
+    color: #ffffff !important; /* text-white for headings */
 }
 
 .dark .category-card.empty {
     @apply bg-gray-800 border-gray-600;
 }
 
-.dark .category-card.empty p {
-    @apply text-gray-500;
+.dark .category-card.empty p,
+.dark .category-card.empty * {
+    color: #9ca3af !important; /* text-gray-400 */
 }
 
 /* Dark mode enhanced output */
