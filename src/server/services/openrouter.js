@@ -99,7 +99,7 @@ class OpenRouterService {
             const selectedModel = model || this.defaultModel;
             const messages = [{
                 role: 'user',
-                content: `Please enhance this basic video idea into a detailed VEO3 prompt using the 10-category framework: "${userPrompt}"`
+                content: `Please enhance this basic idea into a detailed, optimized prompt: "${userPrompt}"`
             }];
 
             const response = await this.client.chat.completions.create({
@@ -152,7 +152,7 @@ class OpenRouterService {
             const selectedModel = model || this.defaultModel;
             const messages = [{
                 role: 'user',
-                content: `Please enhance this basic video idea into a detailed VEO3 prompt using the 10-category framework: "${userPrompt}"`
+                content: `Please enhance this basic idea into a detailed, optimized prompt: "${userPrompt}"`
             }];
 
             const stream = await this.client.chat.completions.create({

@@ -176,7 +176,7 @@ class OllamaService {
 
             const response = await this.client.generate({
                 model: selectedModel,
-                prompt: `${systemPrompt}\n\nPlease enhance this basic video idea into a detailed VEO3 prompt using the 10-category framework: "${userPrompt}"`,
+                prompt: `${systemPrompt}\n\nPlease enhance this basic idea into a detailed, optimized prompt: "${userPrompt}"`,
                 stream: false
             });
 
@@ -231,7 +231,7 @@ class OllamaService {
 
             const stream = await this.client.generate({
                 model: selectedModel,
-                prompt: `${systemPrompt}\n\nPlease enhance this basic video idea into a detailed VEO3 prompt using the 10-category framework: "${userPrompt}"`,
+                prompt: `${systemPrompt}\n\nPlease enhance this basic idea into a detailed, optimized prompt: "${userPrompt}"`,
                 stream: true
             });
 

@@ -120,7 +120,7 @@ class FileManager {
             // Add timestamp and metadata header
             const timestamp = new Date().toISOString();
             const fileContent = [
-                `# VEO3 Enhanced Prompt`,
+                `# Enhanced Output`,
                 `# Generated: ${timestamp}`,
                 `# Created with VEO3-Angel`,
                 '',
