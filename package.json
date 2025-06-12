@@ -21,7 +21,6 @@
     "files": [
       "src/**/*",
       "assets/**/*",
-      "system-prompts/**/*",
       "package.json",
       "!node_modules/{.cache,@types,typescript,eslint*,prettier*,jest*,mocha*,chai*,nyc*,coverage*,*.md}"
     ],
@@ -30,13 +29,6 @@
       {
         "from": "assets",
         "to": "assets",
-        "filter": [
-          "**/*"
-        ]
-      },
-      {
-        "from": "system-prompts",
-        "to": "system-prompts",
         "filter": [
           "**/*"
         ]
